@@ -47,18 +47,18 @@ class LinkedList:
    # Check if head or there is a next for the head to prevent entering the Loop
         # return the initial head
     previous_node = None
-    current_node = self.head # define variable to hold the node on the initial head
+    current_node = self.head #define variable to hold the node on the initial head
 
     while current_node is not None:
 
-      next_node = current_node.next_node # define variable to hold the next node of the current_node  
+      next_node = current_node.next_node #create a var to hold the next node of the current_node  
 
-      current_node.next_node = previous_node # set the current_node next_node to the previous_node
+      current_node.next_node = previous_node #set the current_node next_node to the previous_node
 
-      previous_node = current_node # update the previous_node to the current_node
+      previous_node = current_node #update the previous_node to the current_node
 
-      current_node = next_node # update the current_node to the next_node
-      
-      self.head = previous_node # set the head to the current previous_node which would be the last node in the initial list
+      current_node = next_node #update the current_node to the next_node
+
+      self.head = previous_node #set the head to the current previous_node which would be the last node in the initial list
     
     
