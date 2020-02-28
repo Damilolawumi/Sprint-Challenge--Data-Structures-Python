@@ -31,19 +31,24 @@ class RingBuffer:
 
         # TODO: Your code here
 
-        current = self.storage.head
+        current = self.storage.head #We set the current to the head of the storage.
 
-        while current:
-            list_buffer_contents.append(current)
-            current = current.next
+        while current is not None: # as long as current has a value
+            list_buffer_contents.append(current.value) #add value of current to end of empty list created
+
+            current = current.next  #and repeat with each num
+
             if current is self.storage.head:
                 break
             
-        return [ item.value for item in list_buffer_contents] 
-
- 
-
-       # return list_buffer_contents
+        return list_buffer_contents
+     
+rb = RingBuffer(4)
+rb.append(10)
+rb.append(5)
+rb.append(8)
+rb.append(8)
+print(rb.get())        
 
 # ----------------Stretch Goal-------------------
 

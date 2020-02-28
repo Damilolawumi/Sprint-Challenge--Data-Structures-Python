@@ -1,5 +1,5 @@
 import time
-from binary_search_tree import BinarySearchTree
+from binary_search_tree import BinarySearchTree #import
 
 start_time = time.time()
 
@@ -18,7 +18,7 @@ duplicates = []  # Return the list of duplicates in this data structure
 #         if name_1 == name_2:
 #             duplicates.append(name_1)
 
-binary = BinarySearchTree('names')
+binary = BinarySearchTree('names') 
 
 for names in names_1:
     binary.insert(names)
